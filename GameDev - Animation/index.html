@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Бешеный кот</title>
+  </head>
+<body>
+
+  <input type="text" id="coordXY">
+  <p>
+  <canvas id="canvas" width="1350" height="650"></canvas>
+
+  <script type="text/javascript">
+    var context = document.getElementById('canvas').getContext("2d");
+    imgpath = "cat.jpg";
+    var i = 1, x = 0;
+    var cat1 = loadImage(imgpath, 238, 134, 4, 1);
+
+    var imgHeight = 100, imgWidth = 100;
+    var bHeight = 650, bWidth = 1350;
+    var x = 100.0, y = 100.0;
+    var speed = 2.0;
+
+    var destinationReached = true;
+    var xk = 0.0, yk = 0.0;
+    var dx = 1.0, dy = 1.0;
+    var s;
+
+    function getRandom(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    function speedDown() {
+      if (speed > 0) {
+        speed -= 0.25;
+      }
+    }
+
+    function speedUp() {
+      speed += 1;
+    }
+
+    function loadImage(path, width, height, count, status) {
+      var image = document.createElement("img");
+      var result = {
+        dom : image,
+        width : width,
+        height : height,
+        count : count,
+        status : status,
+        loaded : false,
+        num : 1
+      }
+
+      image.onload = function() {
+        result.loaded = true;
+      }
+      image.src = path;
+      return result;
+    }
+
+    var timePassed = 0;
+    var start = performance.now();
+    var drawn = false;
+    var duration = 50;
+
+    function drawImage(img, x, y) {
+      context.clearRect(0, 0, bWidth, bHeight);
+      switch (img.status) {
+        case 1 :
+          context.drawImage(img.dom, 35 + img.width*(img.num-1), 40, img.width, img.height, x, y + 43, 238, 134);
+          break;
+        case 2 :
+          context.drawImage(img.dom, 35 + img.width*(img.num-1), 174, img.width, img.height, x, y + 43, 238, 134);
+          break;
+        case 3 :
+          context.drawImage(img.dom, 20 + img.width*(img.num-1), 316, img.width, img.height, x, y, 251, 177);
+          break;
+        case 4 :
+          context.drawImage(img.dom, 35 + img.width*(img.num-1), 515, img.width, img.height, x, y + 43, 238, 134);
+          break;
+        case 5 :
+          context.drawImage(img.dom, 50 + img.width*(img.num-1), 672, img.width, img.height, x, y + 43, 238, 134);
+          break;
+        case 6 :
+          context.drawImage(img.dom, 30 + img.width*(img.num-1), 805, img.width, img.height, x, y, 251, 177);
+          break;
+        default:
+      }
+
+    if ((performance.now() - start) > duration) drawn = true;
+
+    if (img.num >= img.count) img.num = 1;
+      else if (drawn) {
+        img.num++;
+        drawn = false;
+        start = performance.now();
+      }
+    }
+
+    var gameLoop = function() {
+
+      if (destinationReached) {
+        xk = getRandom(0, bWidth - imgWidth);
+        yk = getRandom(0, bHeight - imgHeight);
+        s = Math.sqrt(Math.abs(xk - x)*Math.abs(xk - x) + Math.abs(yk - y)*Math.abs(yk - y));
+        dx = (xk - x) / s;
+        dy = (yk - y) / s;
+
+        cat1.status = parseInt(getRandom(1, 7));
+        cat1.num = 1;
+
+        if (dx >= 0 && s <= 300) cat1.status = 1;
+        if (dx >= 0 && s > 300 && s <= 500) cat1.status = 3;
+        if (dx >= 0 && s > 500) cat1.status = 2;
+        if (dx < 0 && s <= 300) cat1.status = 4;
+        if (dx < 0 && s > 300 && s <= 500) cat1.status = 6;
+        if (dx < 0 && s > 500) cat1.status = 5;
+
+        switch (cat1.status) {
+          case 1 : cat1 = loadImage(imgpath, 238, 134, 4, 1);speed = 4.0;duration = 100;break;
+          case 2 : cat1 = loadImage(imgpath, 238, 134, 4, 2);speed = 7.0;duration = 100;break;
+          case 3 : cat1 = loadImage(imgpath, 251, 177, 5, 3);speed = 8.0;duration = 250;break;
+          case 4 : cat1 = loadImage(imgpath, 238, 134, 4, 4);speed = 4.0;duration = 100;break;
+          case 5 : cat1 = loadImage(imgpath, 238, 134, 4, 5);speed = 7.0;duration = 100;break;
+          case 6 : cat1 = loadImage(imgpath, 251, 177, 5, 6);speed = 8.0;duration = 250;break;
+        }
+
+        destinationReached = false;
+
+        document.getElementById("coordXY").value = parseInt(xk) + "  " + parseInt(yk) + " " + parseInt(s);
+
+      } else if (!destinationReached){
+        x += dx * speed;
+        y += dy * speed;
+        if ((Math.abs(x - xk) <= 10) && (Math.abs(y - yk) <= 10)) {
+          destinationReached = true;
+        }
+      }
+
+      drawImage(cat1, x, y);
+
+      requestAnimationFrame(gameLoop);
+    }
+
+    gameLoop();
+
+    /*cat1 = loadImage(imgpath, 251, 177, 5, 6);
+
+    setInterval (function () {
+
+      drawImage(cat1, 0, 0);
+      i++;
+      //drawImage(cat2, 300, 0);
+      //drawImage(cat3, 600, 0);
+    }, 100);*/
+
+    </script>
+</body>
+</html>
