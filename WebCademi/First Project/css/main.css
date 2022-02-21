@@ -1,3 +1,17 @@
-h1 {
-    color:blueviolet;
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-color: darksalmon;
+
+    /* Определяем модель flex-box для блока .header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
