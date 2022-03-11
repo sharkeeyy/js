@@ -119,3 +119,34 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+/* Footer */
+
+.footer {
+    padding-top: 45px;
+    padding-bottom: 130px;
+    background: #1E4776;
+    color: white;
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-copyright {
+    color: #7E9ECE;
+    line-height: 130%;
+}
+
+.footer-copyright-name {
+    font-weight: 700;
+    font-size: 28px;
+
+}
+
+.footer-copyright-name p {
+    font-weight: 600;
+    font-size: 16px;
+}
