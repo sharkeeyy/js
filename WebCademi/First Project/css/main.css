@@ -82,11 +82,27 @@ body {
 }
 
 .card {
-    padding: 20px;
     max-width: 540px;
     background-color: white;
     margin-bottom: 30px;
     box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);
+    transition: transform 0.2s ease-in;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+}
+
+.card-link {
+    display: block;
+    padding: 20px;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.2s ease-in;
+}
+
+.card-link:hover {
+    color:rgba(39, 91, 236)
 }
 
 .card:last-child, .card:nth-last-child(2) {
@@ -105,13 +121,11 @@ body {
     font-weight: 600;
     font-size: 24px;
     line-height: 130%;
-    color: #000000;
 }
 
 .card p {
     font-size: 16px;
     line-height: 130%;
-    color: black;
 }
 
 .portfolio-card-wrapper {
@@ -195,6 +209,13 @@ body {
 
     border: 3px solid #FFFFFF;
     border-radius: 50px;   
+
+    transition: all 0.2s ease-in;
+}
+
+.footer-button:hover {
+    background-color: white;
+    color: #1E4776;
 }
 
 
@@ -217,7 +238,6 @@ body {
 
 .project-img {
     margin-bottom: 70px;
-
 }
 
 .project-description {
@@ -231,4 +251,28 @@ body {
     font-style: normal;
     font-size: 16px;
     line-height: 1.5;
+}
+
+.project-btn-back {
+    display: inline-block;
+    height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    color: #275BEC;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 54px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border: 3px solid #275BEC;
+    border-radius: 50px;      
+    
+    transition: all 0.2s ease-in;
+}
+
+.project-btn-back:hover {
+    background-color: #275BEC;
+    color: white;
 }
