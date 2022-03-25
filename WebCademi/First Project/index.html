@@ -12,16 +12,16 @@
 
 <body>
 
-  <header class="header">
+  <header class="header" id="header">
     <h1 class="header-title">Николай Ильюшкин</h1>
-    <p class="header-subtitle">фрилансер, веб-разработчик</p>
-    <div class="header-arrow">
+    <p class="header-subtitle">веб-разработчик</p>
+    <a href="#portfolio" class="header-arrow">
       <img src="./img/header/chevron-down.svg" alt="Arrow">
-    </div>
+    </a>
   </header>
 
   <main>
-    <div class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="container">
         <h2 class="portfolio-header">Портфолио</h2>
   
@@ -66,7 +66,7 @@
   
       </div>
   
-    </div>
+    </section>
   </main> 
   
   <footer class="footer">
@@ -108,12 +108,10 @@
     </div>
   </footer>
 
-  <script src="./libs/jquery/jquery-3.6.0.min.js">
+  <script src="./libs/jquery/jquery-3.6.0.min.js"></script>
+  <script src="./libs/vide/jquery.vide.min.js"></script>
 
-  </script>
-  <script src="./libs/vide/jquery.vide.min.js">
-
-  </script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
