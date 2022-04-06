@@ -6,20 +6,40 @@ function camelize(string) {
     }); 
 
     return arr.join('');
-
 }
 
-// function camelize(str) {
-//     return str
-//       .split('-') // разбивает 'my-long-word' на массив ['my', 'long', 'word']
-//       .map(
-//         // Переводит в верхний регистр первые буквы всех элементом массива за исключением первого
-//         // превращает ['my', 'long', 'word'] в ['my', 'Long', 'Word']
-//         (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
-//       )
-//       .join(''); // соединяет ['my', 'Long', 'Word'] в 'myLongWord'
-//   }
+function camelizeChain(str) {
+    return str
+      .split('-')
+      .map(
+        (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+      )
+      .join('');
+  }
 
-console.log(camelize("background-color"));
-console.log(camelize("list-style-image"));
-console.log(camelize("-webkit-transition"));
+const generateQueueArray = (count) => {
+    return (new Array(count)).fill(1).map((item, index) => index + 1);
+}
+
+function madeFooBar(array) {
+    for (let i = 0; i < array.length; i++) {
+        if (!(array[i] % 3) && !(array[i] % 5)) {
+            array[i] = 'foobar';
+        } else if (!(array[i] % 3)) {
+            array[i] = 'foo';    
+        } else if (!(array[i] % 5)) {
+            array[i] = 'bar';    
+        }
+    }
+    return array;
+}
+
+const madeFooBarArrow = array => 
+    array.map((item) => 
+        !(item % 3) && !(item % 5) ? 'foobar' : 
+        !(item % 3) ? 'foo' :
+        !(item % 5) ? 'bar' : item 
+    );
+
+console.log(madeFooBar(generateQueueArray(20)));
+
