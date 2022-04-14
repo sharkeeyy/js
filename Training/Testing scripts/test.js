@@ -15,7 +15,7 @@ function camelizeChain(str) {
         (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
       )
       .join('');
-  }
+}
 
 const generateQueueArray = (count) => {
     return (new Array(count)).fill(1).map((item, index) => index + 1);
@@ -34,12 +34,33 @@ function madeFooBar(array) {
     return array;
 }
 
-const madeFooBarArrow = array => 
+const madeFooBarArrow = array => {
     array.map((item) => 
         !(item % 3) && !(item % 5) ? 'foobar' : 
         !(item % 3) ? 'foo' :
         !(item % 5) ? 'bar' : item 
     );
+} 
 
-console.log(madeFooBar(generateQueueArray(20)));
+function filterRange(array, a, b) {
+    return array.filter(item => (item > a) && (item < b));
+}
+
+function filterRangeInPlace(array, a, b) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] <= a || array[i] >= b) {
+            array.splice(i, 1);
+            i -= 1;
+        }
+    };    
+}
+
+const compareReverse = (a, b) => b - a;
+
+const copySorted = array => array.slice().sort();
+
+function sortByAge(array){
+    return array.sort((a, b) => a.age - b.age);
+}
+
 
