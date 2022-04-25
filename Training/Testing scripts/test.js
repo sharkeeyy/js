@@ -21,6 +21,8 @@ const generateQueueArray = (count) => {
     return (new Array(count)).fill(1).map((item, index) => index + 1);
 }
 
+/////****  Foo Bar  ****/////
+
 function madeFooBar(array) {
     for (let i = 0; i < array.length; i++) {
         if (!(array[i] % 3) && !(array[i] % 5)) {
@@ -63,4 +65,23 @@ function sortByAge(array){
     return array.sort((a, b) => a.age - b.age);
 }
 
+/////****  Strings  ****/////
 
+function ucFirst(string) {
+    return string[0].toUpperCase() + string.slice(1);
+}
+
+function checkSpam(string) {
+    return (string.toLowerCase().includes('xxx')) || (string.toLowerCase().includes('viagra'));
+}
+
+function truncate(str, maxlength) {
+    if (str.length <= maxlength) return str;
+    else {
+      return str.slice(0, maxlength) + '...';
+    }
+}
+
+function extractCurrencyValue(string) {
+    return +string.slice(1);
+}
