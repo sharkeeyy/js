@@ -17,11 +17,13 @@ main {
     border-radius: 2rem;
     min-height: 80vh;
     width: 60%;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
 }
 
 .circle1, .circle2 {
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1));
-    border-radius: 2rem;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+    border-radius: 50%;
     height: 20rem;
     width: 20rem;
     position: absolute;
@@ -29,10 +31,10 @@ main {
 
 .circle1 {
     top: 5%;
-    left: 10%;
+    right: 15%;
 }
 
 .circle2 {
     bottom: 5%;
-    right: 15%;
+    left: 10%;
 }
