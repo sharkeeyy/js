@@ -63,7 +63,7 @@ function fillArray(matrix, array) {
     }
     
     
-    // 1console.log(`CurrentI = ${currentI}, CurrentJ = ${currentJ}, Direction = ${direction}, item = ${array[counter]}, minI = ${minI}, maxI = ${maxI}, minJ = ${minJ}, maxJ = ${maxJ}`);
+    // 33console.log(`CurrentI = ${currentI}, CurrentJ = ${currentJ}, Direction = ${direction}, item = ${array[counter]}, minI = ${minI}, maxI = ${maxI}, minJ = ${minJ}, maxJ = ${maxJ}`);
     
   }
   
