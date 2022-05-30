@@ -86,7 +86,6 @@ main {
 .link:hover {
     background: linear-gradient(to top left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8));
     border-radius: 2rem;
-    width: 275px;
     align-items: center;
     cursor: pointer;
 }
