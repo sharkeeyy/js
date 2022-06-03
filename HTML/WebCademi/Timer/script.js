@@ -7,34 +7,18 @@ const labelCounter = document.querySelector('#counter');
 let counter = 0;
 let timer;
 
-btnStart.addEventListener('click', function(){
+btnStart.onclick = function(){;
     timer = setInterval(() => {
         counter += 0.01;
         labelCounter.innerText = counter.toFixed(2);
     }, 10);
-});
+}
 
-btnStop.addEventListener('click', function(){
+btnStop.onclick = function() {
     clearTimeout(timer);
-});
+}
 
-btnReset.addEventListener('click', function(){
+btnReset.onclick = function() {
     counter = 0;
-    labelCounter.innerText = counter; 
-});
-// start.onClick = function() {
-//     // timer = setInterval(() => {
-//     //     counter += 0.01;
-//     //     labelCounter.innerText = counter.toFixed(2);
-//     // }, 10);
-//     labelCounter.innerText = 'Clicked!';
-// };
-
-// btnStop.onClick = function() {
-//     clearTimeout(timer);
-// }
-
-// btnReset.onClick = function() {
-//     counter = 0;
-//     labelCounter.innerText = counter;
-// }
+    labelCounter.innerText = '0.00';
+}
