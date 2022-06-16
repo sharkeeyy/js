@@ -6,7 +6,7 @@ body {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
 }
 
 h1, h2, h3 {
@@ -26,8 +26,16 @@ h3 {
     font-size: 1.5em;
 }
 
-p, ol, li {
+p, ol, li, table {
     font-size: 1.4rem;
+}
+
+table {
+    width: 100%;
+}
+
+table, td, th, tr {
+    border: 1px solid;
 }
 
 figure {
@@ -37,4 +45,8 @@ figure {
 figure figcaption{
     font-size: 1.4em;
     font-style: italic;
+}
+
+figure > p {
+    margin: 0;
 }
