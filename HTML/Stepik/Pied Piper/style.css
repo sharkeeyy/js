@@ -10,7 +10,7 @@
     display: none;
 }
 
-html {
+body {
     width: 1219px;
     font-family: Roboto, sans-serif;
     font-style: normal;
@@ -20,8 +20,18 @@ html {
     margin: auto; 
 }
 
-header {
+h2 {
+    margin-top: 48px;
+    margin-bottom: 16px;
+    font-size: 64px;
+    line-height: 75px;
+    text-align: center;
+    color: #007765;
+}
+
+.header {
     position: sticky;
+    top: 0;
     display: flex;
     height: 84px;
     background-color: #007765;
@@ -63,6 +73,14 @@ header {
     font-size: 72px;
     line-height: 84px;
     text-align: center;
+}
+
+.problem {
+    
+}
+
+.problem-text {
+    padding: 0px 54px 92px 55px;
 }
 
 
