@@ -40,6 +40,7 @@ table, td, th, tr {
 
 figure {
     float: right;
+    width: 300px;
 }
 
 figure figcaption{

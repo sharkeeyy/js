@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.none {
+    display: none;
+}
+
+html {
+    width: 1219px;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    margin: auto; 
+}
+
+header {
+    position: sticky;
+    display: flex;
+    height: 84px;
+    background-color: #007765;
+}
+
+.header-logo {
+    width: 50%;
+    padding-left: 55px;
+    padding-top: 20px;
+}
+
+.header-menu {
+    width: 50%;
+}
+
+.header-menu-list{
+    list-style-type: none;
+    text-align: right;
+    padding: 28px 54px 26px;
+}
+
+.menu-element, .separator {
+    display: inline;
+}
+
+.header-menu-list > li > a{
+    text-decoration: none;
+}
+
+.header-menu-list > li > a:visited, .header-menu-list > li > a:active, .separator{
+    color: white;
+}
+
+.jumbotron {
+    background-image: url("./img/jumbotron.png");
+    padding: 160px 0px;
+
+    color: white;
+    font-size: 72px;
+    line-height: 84px;
+    text-align: center;
+}
+
+
