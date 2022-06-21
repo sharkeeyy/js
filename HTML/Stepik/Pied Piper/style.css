@@ -14,15 +14,15 @@ body {
     width: 1219px;
     font-family: Roboto, sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 24px;
     line-height: 28px;
     margin: auto; 
 }
 
 h2 {
-    margin-top: 48px;
-    margin-bottom: 16px;
+    padding-top: 48px;
+    padding-bottom: 16px;
     font-size: 64px;
     line-height: 75px;
     text-align: center;
@@ -72,15 +72,88 @@ h2 {
     color: white;
     font-size: 72px;
     line-height: 84px;
+    font-weight: 500;
     text-align: center;
 }
 
 .problem {
-    
+    background-color: #ececec;    
 }
 
 .problem-text {
     padding: 0px 54px 92px 55px;
+    font-size: 32px;
+    line-height: 37px;
 }
+
+.hero {
+    background-image: url("./img/hero.png");
+    padding: 127px 163px;
+    font-style: italic;
+    color: white;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 500;
+    text-align: center;    
+}
+
+.pipercoin-logo {
+    float: left;
+    margin-right: 48px;
+}
+
+.team {
+    background-color: #ececec;
+}
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 30px 30px 0px;
+    width: 350px;
+    height: 283px;
+}
+
+.card-name {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #007765;
+}
+
+.card-position {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #333333;
+}
+
+.footer-text {
+    color: white;
+    width: 540px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    padding-top: 48px;
+    padding-bottom: 64px;
+    text-align: center;
+}
+
 
 
