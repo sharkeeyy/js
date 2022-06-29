@@ -3,3 +3,10 @@
 * {
     font-family: Roboto, Helvetica, sans-serif;
 }
+
+@media screen and (max-width: 400px) {
+    .display-3 {
+        font-size: 3rem;
+    }
+}
+
