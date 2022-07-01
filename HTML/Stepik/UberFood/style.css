@@ -10,6 +10,10 @@ header {
     height: 72px;
 }
 
+.none {
+    display: none !important;
+}
+
 .btn-enter {
     width: 78px;
     height: 40px;
@@ -76,6 +80,49 @@ main {
     font-weight: 400;
     font-size: 13px;
     line-height: 21px;
+}
+
+footer {
+    background-color: #262626;
+}
+
+.footer-logo {
+    padding-top: 56px;
+    padding-bottom: 40px;
+}
+
+.footer-line {
+    height: 1px;
+    background-color: #FFFFFF;
+    opacity: 0.4;
+}
+
+.footer-about {
+
+}
+
+.footer-about-col2, .footer-about-col3 {
+    padding-top: 39px;
+    padding-bottom: 25px;
+}
+
+.footer-element {
+    display: block;
+    padding-bottom: 23px;
+
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+
+.footer-links {
+    height: 100px;
+}
+
+.footer-end {
+    height: 100px;
 }
 
 
