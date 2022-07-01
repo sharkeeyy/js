@@ -1,17 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 body {
     padding: 0;
     margin: 0;
+    font-family: Roboto, Helvetica, serif;
 }
 
 header {
-    background-color: coral;
-    height: 100px;
+    height: 72px;
 }
 
-.header-logo {
-    
+.btn-enter {
+    width: 78px;
+    height: 40px;
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 24px;
 }
 
-.responsive {
-    background-color: blue;
+main {
+    box-shadow: 0px 6px 6px 0px rgba(34, 60, 80, 0.1) inset;    
 }
+
+.search {
+    width: 100%;
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom: 2px solid lightslategray; 
+    outline:none; 
+    box-shadow: none; 
+
+    margin: 56px auto;
+    color: lightslategray;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.cards-header {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 34px;
+}
+
+.card {
+    margin-top: 16px;
+}
+
+.card-img{
+    margin-bottom: 16px;
+}
+
+.card-img img {
+    width: 100%;
+}
+
+.card-name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.card-type {
+    margin: 4px auto;
+    color: #626262;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.card-time {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+
