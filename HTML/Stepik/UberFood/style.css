@@ -1,17 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+.none {
+    display: none !important;
+}
+
 body {
     padding: 0;
     margin: 0;
     font-family: Roboto, Helvetica, serif;
 }
 
-header {
-    height: 72px;
+.wrapper {
+    margin-left: 60px;
+    margin-right: 60px;
 }
 
-.none {
-    display: none !important;
+header {
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 .btn-enter {
@@ -87,6 +93,7 @@ footer {
 }
 
 .footer-logo {
+    margin: 0px;
     padding-top: 56px;
     padding-bottom: 40px;
 }
@@ -98,12 +105,26 @@ footer {
 }
 
 .footer-about {
-
+    margin: 0px;
 }
 
-.footer-about-col2, .footer-about-col3 {
-    padding-top: 39px;
-    padding-bottom: 25px;
+.footer-about-col1, .footer-about-col2, .footer-about-col3 {
+    padding: 39px 0px 25px 0px;
+}
+
+.select {
+    width: 227px;
+    height: 40px;
+    margin-bottom: 32px;
+    background: #3B3B3B;
+    color: white;
+    outline:none; 
+    box-shadow: none; 
+    border: none;
+
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
 }
 
 .footer-element {
@@ -117,12 +138,76 @@ footer {
     color: #FFFFFF;
 }
 
-.footer-links {
-    height: 100px;
+.footer-element-logo, .footer-element-logo::before {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
 }
+
+.footer-element-logo {
+    display: block;
+    color: white;
+}
+
+.footer-element-logo::before {
+    content: "#";
+    color: #49A144;
+}
+
+.socials {
+    margin: 0px;
+}
+
+.socials > img {
+    width: 24px;
+    height: 24px;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+
+.footer-links {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
 
 .footer-end {
-    height: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 11px;
+    line-height: 13px;
+    color: white;
 }
 
 
+@media screen and (max-width: 768px){
+    .wrapper {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    .footer-about-col2 {
+        padding-top: 39px;
+        padding-bottom: 25px;
+    }
+
+    .footer-about-col3 {
+        padding-top: 39px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .wrapper {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .footer-about-col2 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .footer-about-col3 {
+        padding-top: 0;
+    }
+}
