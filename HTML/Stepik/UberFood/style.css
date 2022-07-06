@@ -179,6 +179,10 @@ footer {
     color: white;
 }
 
+.jumbo {
+    background-image: url('./img/food.png');
+    height: 364px;
+}
 
 @media screen and (max-width: 768px){
     .wrapper {
@@ -193,6 +197,10 @@ footer {
 
     .footer-about-col3 {
         padding-top: 39px;
+    }
+
+    .jumbo {
+        background-image: url('./img/food768.png');
     }
 }
 
@@ -209,5 +217,10 @@ footer {
 
     .footer-about-col3 {
         padding-top: 0;
+    }
+
+    .jumbo {
+        background-image: url('./img/food320.png');
+        height: 255px;
     }
 }
