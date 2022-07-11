@@ -184,6 +184,64 @@ footer {
     height: 364px;
 }
 
+.logo-menu {
+    padding: 40px 0px 40px;
+    
+}
+
+.menu-element {
+    color: #626262;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding-right: 40px;
+}
+
+.dishes {
+    padding: 0px 0px 80px;
+}
+
+.dishes-header {
+    padding-top: 56px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 34px;
+}
+
+.dish-cart {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    margin-right: 16px;
+    margin-bottom: 49px;
+}
+
+.dish-settings {
+    padding: 16px;
+}
+
+.dish-name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.dish-type {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+.dish-price {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+}
+
+
 @media screen and (max-width: 768px){
     .wrapper {
         margin-left: 0px;
@@ -222,5 +280,27 @@ footer {
     .jumbo {
         background-image: url('./img/food320.png');
         height: 255px;
+    }
+
+    .dish-settings {
+        padding: 0px;  
+    }
+
+    .dish-cart {
+        margin-right: -16px;
+        margin-bottom: 16px;
+    }
+
+    .dish-cart > img {
+        width: 102px;
+        height: 102px;
+    }
+
+    .dish-name {
+        font-size: 14px;
+        max-width: 188px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
