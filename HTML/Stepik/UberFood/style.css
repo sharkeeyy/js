@@ -184,6 +184,44 @@ footer {
     height: 364px;
 }
 
+.pushkin {
+    position: absolute;
+    background-color: white;
+    top: 80px;
+    left: 81px;
+    height: 204px;
+    border-radius: 2px;
+    padding: 38px;
+}
+
+.pushkin-header {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+.pushkin-content {
+    padding-top: 54px;
+}
+
+.push-content-type {
+    font-size: 14px;
+    line-height: 16px;
+    color: #626262;
+}
+
+.push-content-time {
+    width: 100px;
+    background-color: #262626;
+    color: white;
+    height: 32px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    border-radius: 10px;
+}
+
 .logo-menu {
     padding: 40px 0px 40px;
     
@@ -260,6 +298,7 @@ footer {
     .jumbo {
         background-image: url('./img/food768.png');
     }
+
 }
 
 @media screen and (max-width: 320px){
@@ -303,4 +342,21 @@ footer {
         overflow: hidden;
         text-overflow: ellipsis;
     }
+
+    .pushkin {
+        left: 5px;
+    }
+
+    .pushkin-header {
+        font-size: 24px;
+    }
+
+    .pushkin-content {
+        padding-top: 40px;
+    }
+
+    .push-content-type {
+        padding-bottom: 16px;
+    }
+
 }
