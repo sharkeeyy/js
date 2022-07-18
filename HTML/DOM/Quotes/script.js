@@ -10,8 +10,16 @@ const quotes = [
     {quote: 'Quote5', person: 'Person5'},
 ];
 
-btn.addEventListener('click', function() {
-    let random = Math.floor(Math.random() * quotes.length);
-    quote.innerText = quotes[random].quote;
-    person.innerText = quotes[random].person;
-});
+btn.addEventListener('click', getQuote);
+
+function getQuote() {
+    let request = new XMLHttpRequest();
+    request.open('GET', "https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=parseQuote");
+    request.responseType = 'text';
+    
+    request.onload = function() {
+        console.log(request.response);
+    };
+
+    request.send();
+}
