@@ -12,8 +12,23 @@ body {
     height: 100vh;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #canvas1 {
-    border: 3px solid white;
     width: 800px;
     height: 700px;
+}
+
+.container p{
+    color: white;
+    font-size: 25px;
+}
+
+#slider {
+    width: 100%;
 }
