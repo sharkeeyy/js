@@ -1,28 +1,18 @@
-/// elbrus_bootcamp ->>>> elbrusBootcamp
-//// abc_def_ghi ->>>> abcDefGhi
+const field = '123';
 
-// const camel = (string) => {
-//   let array = string.split('_');
-//   let result = array[0];
-//   for (let i = 1; i < array.length; i++) {
-//     result += array[i][0].toUpperCase() + array[i].slice(1);
-//   }
-
-//   return result;
-// }
-
-// console.log(camel('elbrus_bootcamp'));
-// console.log(camel('abc_def_ghi'));
-
-function makeSummer(n) {
-  return function (a) {
-    return n + a;
-  }
+const obj = {
+  name: 'Ray',
+  age: 25,
+  10: 'value',
+  [field]: '123',
 }
 
+const obj2 = Object.assign(obj);
 
-let sumTen = new makeSummer(10);
-let sumHundred = new makeSummer(100);
+const [a, ...array] = [1, 2, 3, 4 ,5]
 
+function func() {
+  return this;
+}
 
-
+console.log(func.apply(obj2));
