@@ -1,0 +1,12 @@
+{
+  "name": "testing-scripts",
+  "version": "1.0.0",
+  "description": "Выбрать input типа checkbox. Выбрать input типа checkbox, НЕ отмеченный. Найти все элементы с id=message или message-*. Найти все элементы с id=message-*. Найти все ссылки с расширением href=\"...zip\". Найти все элементы с атрибутом data-action, содержащим delete в списке (через пробел). Найти все элементы, у которых ЕСТЬ атрибут data-action, но он НЕ содержит delete в списке (через пробел). Выбрать все чётные элементы списка #messages. Выбрать один элемент сразу за заголовком h3#widget-title на том же уровне вложенности. Выбрать все ссылки, следующие за заголовком h3#widget-title на том же уровне вложенности. Выбрать ссылку внутри последнего элемента списка #messages.",
+  "main": "fillSpiralMatrix.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
