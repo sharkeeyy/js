@@ -20,4 +20,4 @@ function flatThroughString(array) {
   return array.toString().split(',');
 }
 
-console.log(flatThroughString([0, [1, 2], [[3, 4], [5, 6]]]));
+console.log(flat([0, [1, 2], [[3, 4], [5, 6]]]));
