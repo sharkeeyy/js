@@ -16,4 +16,22 @@ function generateSet(set, n) {
   }
 }
 
-console.log(generateSet([], 3))
+function sequence(number) {
+  const stack = [];
+
+  const backtrack = () => {
+    if (stack.length === number) {
+      console.log(stack.join(''));
+      return;
+    }
+    [0, 1].forEach((digit) => {
+      stack.push(digit);
+      backtrack();
+      stack.pop();
+    })
+  }
+
+  backtrack();
+}
+
+sequence(5);
