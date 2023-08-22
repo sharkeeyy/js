@@ -4,7 +4,7 @@ function quickSort(array) {
   if (!array.length) return [];
 
   let middle = Math.floor(array.length / 2);
-  const left = [];
+  const left = []; 
   const right = [];
 
   for (let i = 0; i < array.length; i++) {
@@ -12,7 +12,7 @@ function quickSort(array) {
     if (array[i] < array[middle]) {
       left.push(array[i])
     } else {
-      right.push(array[i]);``
+      right.push(array[i]);
     }
   }
 
