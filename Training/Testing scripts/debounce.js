@@ -10,7 +10,7 @@ setTimeout(() => f(6), 600);
 setTimeout(() => f(7), 700);
 setTimeout(() => f(8), 800);
 setTimeout(() => f(9), 900);
-setTimeout(() => f(10), 1000); 
+setTimeout(() => f(10), 1000);  
 
 
 function debounce(callback, delay) {
