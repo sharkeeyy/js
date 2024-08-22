@@ -54,4 +54,33 @@ function dFS(root) {
   return max;
 }
 
-console.log(dFS(four));
+function maxDepth(root) {
+  let max = 0;
+
+  const backtrack = (root, depth) => {
+    if (root) {
+      if (depth > max) {
+        max = depth;
+      }
+      backtrack(root.left, depth + 1);
+      backtrack(root.right, depth + 1);
+    }
+  }
+
+  backtrack(root, 1);
+
+  return max;
+}
+
+function maxDepth2(root) {
+  if (!root) {
+    return 0;
+  }
+
+  const left = maxDepth2(root.left);
+  const right = maxDepth2(root.right);
+
+  return Math.max(left, right) + 1;
+}
+
+console.log(maxDepth2(four));
