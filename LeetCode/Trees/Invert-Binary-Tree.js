@@ -49,9 +49,17 @@ function invertTree(root) {
   return root;
 }
 
+function invertTreeRecursive(root) {
+  if (root) {
+    [root.left, root.right] = [root.right, root.left];
+    invertTreeRecursive(root.left);
+    invertTreeRecursive(root.right);
+  }
+}
+
 console.log(bFS(four));
 
-invertTree(four);
+invertTreeRecursive(four);
 
 console.log(bFS(four));
 
